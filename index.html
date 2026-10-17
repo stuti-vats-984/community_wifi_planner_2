@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>CommunityMesh – Community Wi-Fi Planner</title>
+</head>
+<body>
+  <header>
+    <h1>CommunityMesh <small>community Wi-Fi planning &amp; optimization</small></h1>
+    <p class="disclaimer">Simplified propagation and capacity models. Estimates are <b>not</b> measurements and do not replace a site survey. Example scenarios use illustrative parameters only.</p>
+  </header>
+  <main>
+    <section class="panel" aria-label="Scenario and configuration">
+      <h2>Scenario</h2>
+      <div class="row"><select id="scenarioSelect" aria-label="Example scenario"></select><button id="loadBtn">Load</button></div>
+      <div class="row"><button id="exportBtn">Export JSON</button><label class="file">Import JSON<input id="importFile" type="file" accept="application/json" hidden /></label></div>
+      <h2>Tools</h2>
+      <div class="row" role="group" aria-label="Edit mode">
+        <button data-mode="select" class="mode on">Select / drag</button>
+        <button data-mode="ap" class="mode">Add AP</button>
+        <button data-mode="client" class="mode">Add client</button>
+      </div>
+      <h2>Selected device</h2>
+      <div id="editor" class="form"></div>
+      <h2>Radio &amp; area settings</h2>
+      <div id="config" class="form"></div>
+    </section>
+    <section class="stage" aria-label="Deployment workspace">
+      <div id="error" class="error" role="alert" hidden></div>
+      <canvas id="map" width="900" height="450" aria-label="Deployment map with signal heatmap"></canvas>
+      <div id="inspect" class="inspect" aria-live="polite">Hover over the map to inspect estimated RSSI / SNR / SINR.</div>
+      <div id="legend" class="legend"></div>
+    </section>
+    <section class="panel" aria-label="Results">
+      <h2>Live metrics</h2>
+      <table id="metrics"></table>
+      <h2>Optimization</h2>
+      <button id="optBtn">Recommend AP placements</button>
+      <div id="recs" class="recs"></div>
+      <h2>Scenario comparison</h2>
+      <div class="row"><button id="snapBtn">Save snapshot</button><button id="clearSnaps">Clear</button></div>
+      <div class="scroll"><table id="compare"></table></div>
+    </section>
+  </main>
+  <script type="module" src="/src/ui/main.ts"></script>
+</body>
+</html>

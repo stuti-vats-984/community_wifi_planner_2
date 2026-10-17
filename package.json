@@ -1,0 +1,21 @@
+{
+  "name": "communitymesh",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Browser-based community Wi-Fi planning and optimization tool (simplified models, not a site survey).",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc --noEmit && vite build",
+    "preview": "vite preview",
+    "test": "vitest run",
+    "typecheck": "tsc --noEmit",
+    "export:sample": "vite-node scripts/export-sample.ts"
+  },
+  "devDependencies": {
+    "typescript": "^5.5.0",
+    "vite": "^5.4.0",
+    "vite-node": "^2.1.0",
+    "vitest": "^2.1.0"
+  }
+}

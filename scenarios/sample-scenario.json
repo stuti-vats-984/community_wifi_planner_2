@@ -1,0 +1,150 @@
+{
+  "name": "A. Small apartment block",
+  "description": "Two APs, interior walls. Clients at the east end sit behind two walls and have weak links.",
+  "config": {
+    "widthM": 40,
+    "heightM": 20,
+    "model": "log-distance",
+    "pathLossExponent": 3.5,
+    "refDistanceM": 1,
+    "bandwidthMHz": 20,
+    "noiseFigureDb": 7,
+    "clientAntennaGainDbi": 0,
+    "minRssiDbm": -75,
+    "minSnrDb": 10,
+    "protocolEfficiency": 0.6,
+    "minThroughputMbps": 5
+  },
+  "aps": [
+    {
+      "id": "AP-1",
+      "x": 6,
+      "y": 10,
+      "txPowerDbm": 20,
+      "antennaGainDbi": 2,
+      "freqMHz": 2412,
+      "channel": 1,
+      "maxClients": 30,
+      "costUsd": 80
+    },
+    {
+      "id": "AP-2",
+      "x": 18,
+      "y": 10,
+      "txPowerDbm": 20,
+      "antennaGainDbi": 2,
+      "freqMHz": 2437,
+      "channel": 6,
+      "maxClients": 30,
+      "costUsd": 80
+    }
+  ],
+  "clients": [
+    {
+      "id": "C01",
+      "x": 2.5,
+      "y": 6.5,
+      "demandMbps": 3
+    },
+    {
+      "id": "C02",
+      "x": 0.3,
+      "y": 8.8,
+      "demandMbps": 3
+    },
+    {
+      "id": "C03",
+      "x": 2.1,
+      "y": 11.9,
+      "demandMbps": 3
+    },
+    {
+      "id": "C04",
+      "x": 4.5,
+      "y": 12.4,
+      "demandMbps": 3
+    },
+    {
+      "id": "C05",
+      "x": 5.7,
+      "y": 7.8,
+      "demandMbps": 3
+    },
+    {
+      "id": "C06",
+      "x": 21.8,
+      "y": 6.4,
+      "demandMbps": 3
+    },
+    {
+      "id": "C07",
+      "x": 20.7,
+      "y": 10.6,
+      "demandMbps": 3
+    },
+    {
+      "id": "C08",
+      "x": 17.1,
+      "y": 12.1,
+      "demandMbps": 3
+    },
+    {
+      "id": "C09",
+      "x": 23.9,
+      "y": 11.5,
+      "demandMbps": 3
+    },
+    {
+      "id": "C10",
+      "x": 16.2,
+      "y": 6.6,
+      "demandMbps": 3
+    },
+    {
+      "id": "C11",
+      "x": 37.6,
+      "y": 12.5,
+      "demandMbps": 3
+    },
+    {
+      "id": "C12",
+      "x": 36.9,
+      "y": 10.7,
+      "demandMbps": 3
+    },
+    {
+      "id": "C13",
+      "x": 30.5,
+      "y": 7.6,
+      "demandMbps": 3
+    },
+    {
+      "id": "C14",
+      "x": 38.1,
+      "y": 14.1,
+      "demandMbps": 3
+    },
+    {
+      "id": "C15",
+      "x": 31.8,
+      "y": 2.2,
+      "demandMbps": 3
+    }
+  ],
+  "walls": [
+    {
+      "x1": 12,
+      "y1": 0,
+      "x2": 12,
+      "y2": 20,
+      "lossDb": 12
+    },
+    {
+      "x1": 26,
+      "y1": 0,
+      "x2": 26,
+      "y2": 20,
+      "lossDb": 12
+    }
+  ]
+}
